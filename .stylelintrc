@@ -1,0 +1,9 @@
+{
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.jsx"
+  ],
+  "rules": {
+    "selector-type-no-unknown": false
+  }
+}
