@@ -11,7 +11,7 @@ const generateRandomBetween = (min, max, exclude) => {
   const randomNumber = Math.floor(Math.random() * (max - min)) + min
 
   if (randomNumber === exclude) {
-    generateRandomBetween(min, max, exclude)
+    return generateRandomBetween(min, max, exclude)
   } else {
     return randomNumber
   }
@@ -24,6 +24,7 @@ const GameScreen = ({ userChoice, onGameOver }) => {
   const currentHigh = useRef(100)
 
   useEffect(() => {
+    console.log(currentGuess)
     if (currentGuess === userChoice) {
       onGameOver(rounds)
     }
